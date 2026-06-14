@@ -1,40 +1,55 @@
 import { useEffect } from "react";
-import "@/App.css";
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-import { HOME } from "@/constants/testIds";
+import { Toaster } from "sonner";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import WhyElepha from "./components/WhyElepha";
+import Industries from "./components/Industries";
+import Process from "./components/Process";
+import Testimonials from "./components/Testimonials";
+import CTABanner from "./components/CTABanner";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
+function useScrollReveal() {
   useEffect(() => {
-    helloWorldApi();
+    const els = document.querySelectorAll(".reveal");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
   }, []);
+}
+
+const Landing = () => {
+  useScrollReveal();
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          data-testid={HOME.emergentLink}
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
+    <div data-testid="landing-page" className="relative font-sans text-[#1F2937]">
+      <Navbar />
+      <main>
+        <Hero />
+        <Services />
+        <WhyElepha />
+        <Industries />
+        <Process />
+        <Testimonials />
+        <CTABanner />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 };
@@ -42,11 +57,10 @@ const Home = () => {
 function App() {
   return (
     <div className="App">
+      <Toaster richColors position="top-right" />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route path="/" element={<Landing />} />
         </Routes>
       </BrowserRouter>
     </div>
