@@ -4,20 +4,20 @@ export default function Process() {
   return (
     <section
       data-testid="process-section"
-      className="relative py-24 md:py-32 bg-[#F9FAFB]"
+      className="relative py-24 md:py-32 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="max-w-3xl reveal">
           <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#00A6A6]">
-            Our process
+            How an engagement runs
           </span>
-          <h2 className="font-poppins font-semibold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#0F4C81] mt-4 leading-tight">
-            A calm, predictable path from idea to impact.
+          <h2 className="font-poppins font-semibold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#0F4C81] mt-4 leading-[1.1]">
+            Five disciplined steps —
+            <span className="block">from first call to steady state.</span>
           </h2>
         </div>
 
         <div className="mt-16 relative">
-          {/* Connector line - desktop */}
           <div className="hidden md:block absolute top-7 left-7 right-7 h-px bg-gradient-to-r from-[#0F4C81]/0 via-[#0F4C81]/25 to-[#0F4C81]/0" aria-hidden />
 
           <ol className="grid grid-cols-1 md:grid-cols-5 gap-8">

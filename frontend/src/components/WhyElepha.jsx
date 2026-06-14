@@ -63,13 +63,14 @@ export default function WhyElepha() {
             <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#00A6A6]">
               Why Elepha
             </span>
-            <h2 className="font-poppins font-semibold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#0F4C81] mt-4 leading-tight">
-              Trusted by teams who can&apos;t afford to get hiring or tech wrong.
+            <h2 className="font-poppins font-semibold tracking-tight text-3xl sm:text-4xl lg:text-5xl text-[#0F4C81] mt-4 leading-[1.1]">
+              A boutique by design.
+              <span className="block">Enterprise in discipline.</span>
             </h2>
             <p className="mt-5 text-[#4B5563] text-base md:text-lg leading-relaxed">
-              We blend the rigour of enterprise consulting with the speed of a
-              boutique partner — calibrated for leaders who need outcomes, not
-              optics.
+              Elepha was started by engineers and TA leaders who got tired of
+              vendor fatigue. We are intentionally small, intentionally senior,
+              and intentionally accountable.
             </p>
 
             <div id="about" className="mt-10 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
@@ -77,10 +78,10 @@ export default function WhyElepha() {
                 About Elepha
               </div>
               <p className="mt-3 text-[#4B5563] leading-relaxed">
-                Elepha Solutions is a technology and talent services firm built
-                for modern enterprises. Our cross-functional teams bring
-                strategy, engineering and recruitment under one roof — giving
-                clients a single, accountable partner for end-to-end growth.
+                Headquartered in Chennai and serving teams across India, the
+                Middle East and North America, Elepha brings strategy,
+                engineering and recruitment under one roof. One partner. One
+                throat to choke. One conversation away.
               </p>
             </div>
           </div>
@@ -112,17 +113,25 @@ export default function WhyElepha() {
 
             <div className="mt-8 rounded-3xl bg-[#0F4C81] text-white p-8 md:p-10 reveal relative overflow-hidden">
               <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-[#00A6A6]/30 blur-3xl" aria-hidden />
-              <div className="relative grid grid-cols-2 md:grid-cols-4 gap-6">
-                {STATS.map((s) => (
-                  <div key={s.label} data-testid={`stat-${s.label.toLowerCase().replace(/\s+/g, "-")}`}>
-                    <div className="font-poppins font-semibold text-3xl md:text-4xl text-white">
-                      <Counter value={s.value} suffix={s.suffix} />
+              <div className="relative">
+                <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[#7fe5e5]">
+                  By the numbers
+                </div>
+                <div className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {STATS.map((s) => (
+                    <div
+                      key={s.label}
+                      data-testid={`stat-${s.label.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      <div className="font-poppins font-semibold text-3xl md:text-4xl text-white">
+                        <Counter value={s.value} suffix={s.suffix} />
+                      </div>
+                      <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/70">
+                        {s.label}
+                      </div>
                     </div>
-                    <div className="mt-2 text-xs uppercase tracking-[0.18em] text-white/70">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
           </div>

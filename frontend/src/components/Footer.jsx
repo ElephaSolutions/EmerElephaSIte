@@ -5,6 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer
+      id="footer"
       data-testid="footer"
       className="relative bg-[#0a365c] text-white pt-20 pb-10"
     >
@@ -25,9 +26,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="mt-5 text-white/70 max-w-sm leading-relaxed">
-              Technology and talent services for organisations that want to
-              move with confidence. Built in India, working with teams
-              everywhere.
+              A senior-led technology and talent practice — built for teams who
+              measure their partners by outcomes, not by activity.
             </p>
 
             <div className="flex items-center gap-3 mt-7">
@@ -124,7 +124,7 @@ export default function Footer() {
             © {year} Elepha Solutions. All rights reserved.
           </p>
           <p className="text-xs text-white/50">
-            Empowering Businesses with Technology and Talent.
+            A chance to elevate — your team and your technology.
           </p>
         </div>
       </div>

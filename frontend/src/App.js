@@ -7,11 +7,10 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import WhyElepha from "./components/WhyElepha";
+import Principles from "./components/Principles";
 import Industries from "./components/Industries";
 import Process from "./components/Process";
-import Testimonials from "./components/Testimonials";
 import CTABanner from "./components/CTABanner";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function useScrollReveal() {
@@ -43,11 +42,10 @@ const Landing = () => {
         <Hero />
         <Services />
         <WhyElepha />
+        <Principles />
         <Industries />
         <Process />
-        <Testimonials />
         <CTABanner />
-        <Contact />
       </main>
       <Footer />
     </div>

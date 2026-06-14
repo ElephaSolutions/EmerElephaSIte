@@ -16,129 +16,146 @@ export const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Why Elepha", href: "#why-elepha" },
   { label: "Industries", href: "#industries" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#footer" },
 ];
 
 export const SERVICES = [
   {
     id: "it-services",
     title: "IT Services & Management",
-    short: "Reliable IT consulting, cloud, infrastructure & managed services.",
+    short: "Engineering and operating the systems your business runs on.",
     long:
-      "From cloud migrations to 24×7 managed operations, we engineer dependable IT systems that scale with your ambition.",
+      "Architecture reviews, cloud build-outs, application modernisation and 24×7 managed operations — delivered by senior squads that own outcomes, not just tickets.",
     iconKey: "monitor",
+    bullets: ["Cloud & DevOps", "Application Modernisation", "Managed Services"],
   },
   {
     id: "talent-acquisition",
     title: "Talent Acquisition",
-    short: "Connecting organizations with exceptional, vetted talent.",
+    short: "A senior search practice for roles that can't be left to chance.",
     long:
-      "A curated talent network and deep functional expertise help us match the right people to your most critical roles — faster.",
+      "Niche, leadership and high-volume mandates handled with the rigour of an in-house TA team and the reach of a specialist firm. Calibrated submissions, transparent pipelines, zero noise.",
     iconKey: "users",
+    bullets: ["Leadership Search", "Niche Tech Hiring", "Volume Pipelines"],
   },
   {
     id: "raas",
     title: "Recruitment as a Service",
-    short: "Scalable recruitment solutions tailored for growing businesses.",
+    short: "An embedded hiring engine that flexes with your roadmap.",
     long:
-      "Flex your hiring engine on-demand. RaaS gives you a fractional, embedded recruitment team that ramps up or down with your roadmap.",
+      "Plug-in pods of sourcers, recruiters and coordinators that operate inside your tools, your brand and your bar — from kickoff to offer rollouts. Pay per outcome, scale up or down per quarter.",
     iconKey: "rocket",
+    bullets: ["Embedded Pods", "Outcome Pricing", "ATS-native Workflows"],
   },
   {
     id: "iaas",
     title: "Interview as a Service",
-    short: "Expert technical & functional interview panels on tap.",
+    short: "Senior interview panels, on demand, without the hiring drag.",
     long:
-      "Outsource your interview loops to our calibrated panel of senior engineers and domain experts. Faster decisions, stronger signal.",
+      "Calibrated interviewers across 40+ tech and functional tracks conduct your loops, score with structured rubrics, and hand you decision-ready debriefs in under 24 hours.",
     iconKey: "messageSquare",
+    bullets: ["Calibrated Panels", "Structured Rubrics", "24-hr Debriefs"],
   },
 ];
 
 export const WHY_FEATURES = [
   {
-    title: "Industry Expertise",
-    desc: "Deep playbooks across IT, BFSI, healthcare, manufacturing and product startups.",
+    title: "Senior-Led Delivery",
+    desc: "Every engagement is anchored by practitioners with 10+ years in their craft — never juniors with senior labels.",
     iconKey: "award",
   },
   {
-    title: "Quality-Driven Delivery",
-    desc: "SLA-backed engagements with measurable outcomes — never just activity.",
+    title: "Outcome Accountability",
+    desc: "We commit to time-to-shortlist, time-to-deploy and quality metrics in writing. If we miss them, you don't pay for them.",
     iconKey: "shieldCheck",
   },
   {
-    title: "Flexible Engagement Models",
-    desc: "Project, retainer, T&M, RaaS, IaaS — designed around how you actually work.",
+    title: "Engagement on Your Terms",
+    desc: "Project, retainer, T&M, RaaS pods or IaaS slots — we shape the commercial model around your operating reality.",
     iconKey: "layers",
   },
   {
-    title: "Faster Hiring & Tech Solutions",
-    desc: "Time-to-shortlist measured in days. Time-to-deploy measured in weeks.",
+    title: "Speed Without Shortcuts",
+    desc: "Tight feedback loops, weekly leadership reviews and a flat escalation path keep momentum without breaking quality.",
     iconKey: "zap",
   },
 ];
 
 export const STATS = [
-  { value: 100, suffix: "+", label: "Clients Supported" },
-  { value: 5000, suffix: "+", label: "Candidates Evaluated" },
-  { value: 50, suffix: "+", label: "Technology Domains" },
-  { value: 95, suffix: "%", label: "Client Satisfaction" },
+  { value: 12, suffix: "+", label: "Years of Combined Practice" },
+  { value: 40, suffix: "+", label: "Specialist Tracks Covered" },
+  { value: 7, suffix: "", label: "Day Avg. Time-to-Shortlist" },
+  { value: 96, suffix: "%", label: "Repeat Engagement Rate" },
 ];
 
 export const INDUSTRIES = [
-  { name: "IT & Software", iconKey: "code" },
-  { name: "Banking & Finance", iconKey: "landmark" },
-  { name: "Healthcare", iconKey: "heartPulse" },
-  { name: "Manufacturing", iconKey: "factory" },
-  { name: "Retail", iconKey: "shoppingBag" },
-  { name: "Startups", iconKey: "rocket" },
+  {
+    name: "IT & Software",
+    iconKey: "code",
+    blurb: "Product, platform and SaaS teams scaling engineering bandwidth.",
+  },
+  {
+    name: "Banking & Finance",
+    iconKey: "landmark",
+    blurb: "Modernisation, compliance-ready hires, and risk-aware delivery.",
+  },
+  {
+    name: "Healthcare & Life Sciences",
+    iconKey: "heartPulse",
+    blurb: "Regulated environments, clinical-aware tech and specialist talent.",
+  },
+  {
+    name: "Manufacturing",
+    iconKey: "factory",
+    blurb: "Industry 4.0, IoT enablement and shop-floor digitisation talent.",
+  },
+  {
+    name: "Retail & Consumer",
+    iconKey: "shoppingBag",
+    blurb: "Omnichannel platforms, data teams and demand-led hiring sprints.",
+  },
+  {
+    name: "Startups & Scale-ups",
+    iconKey: "rocket",
+    blurb: "Founding teams, fractional leadership and ramp-up RaaS pods.",
+  },
 ];
 
 export const PROCESS_STEPS = [
   {
-    title: "Understand",
-    desc: "We listen first — to your business, your goals, and your constraints.",
+    title: "Discover",
+    desc: "A working session where we map your business, your stack and the role or problem in unambiguous terms.",
   },
   {
-    title: "Plan",
-    desc: "We translate context into a tight scope, timeline and success metrics.",
+    title: "Design",
+    desc: "We translate context into a written engagement: scope, milestones, success metrics and commercial model.",
   },
   {
-    title: "Execute",
-    desc: "Senior squads ship in disciplined, transparent sprints.",
+    title: "Deploy",
+    desc: "A senior squad goes live in days — recruiters, engineers or interviewers, embedded in your tools and rituals.",
   },
   {
-    title: "Deliver",
-    desc: "Every milestone is reviewed against the outcomes we promised.",
+    title: "Measure",
+    desc: "Weekly outcome reviews against the metrics we signed up for — no glossy decks, just movement.",
   },
   {
-    title: "Support",
-    desc: "Ongoing managed services and talent extensions keep you moving.",
+    title: "Evolve",
+    desc: "Engagements flex as your roadmap shifts. Scale up, pause, or pivot to a different model without friction.",
   },
 ];
 
-export const TESTIMONIALS = [
+// Differentiator pillars used in the new "Operating Principles" section
+export const PRINCIPLES = [
   {
-    name: "Anika Raghavan",
-    role: "VP Engineering, FinEdge Capital",
-    quote:
-      "Elepha set up an embedded RaaS pod for our hiring surge. We closed 18 senior engineering roles in a quarter without compromising on bar.",
-    avatar:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&w=240&q=80",
+    title: "Calibrated, not commoditised",
+    desc: "Every shortlist, panel and sprint is calibrated to your bar — we'd rather send three signal-rich candidates than thirty templated ones.",
   },
   {
-    name: "Ramesh Iyer",
-    role: "CTO, Northwave Health",
-    quote:
-      "Their Interview-as-a-Service panel acts like a senior extension of our team. The signal we get on candidates is genuinely better than what we had internally.",
-    avatar:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&w=240&q=80",
+    title: "Transparent by default",
+    desc: "Live dashboards, shared trackers and weekly written updates. You always know exactly where things stand.",
   },
   {
-    name: "Priya Menon",
-    role: "Director of People, Lumen Retail",
-    quote:
-      "Pragmatic, calm, and outcome-driven. Elepha is the partner you wish you had picked from day one.",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&w=240&q=80",
+    title: "Senior on the line",
+    desc: "A partner-level lead is accountable for every account — escalations reach a decision-maker in under 24 hours.",
   },
 ];
