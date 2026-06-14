@@ -1,0 +1,145 @@
+{
+  "project_name": "Elepha Solutions",
+  "theme": "light",
+  "archetype": "4 (Swiss & High-Contrast) - Corporate Variation",
+  "typography": {
+    "headings": {
+      "family": "Poppins",
+      "fallback": "sans-serif",
+      "weights": ["400", "600", "700"],
+      "classes": "font-poppins tracking-tight"
+    },
+    "body": {
+      "family": "Open Sans",
+      "fallback": "sans-serif",
+      "weights": ["400", "500", "600"],
+      "classes": "font-sans leading-relaxed"
+    }
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#0F4C81",
+      "light": "#1d619e",
+      "dark": "#0a365c"
+    },
+    "accent": {
+      "DEFAULT": "#00A6A6",
+      "light": "#00c2c2",
+      "dark": "#008080"
+    },
+    "secondary": {
+      "DEFAULT": "#FFFFFF"
+    },
+    "background": {
+      "default": "#FFFFFF",
+      "alt": "#F9FAFB",
+      "dark": "#0F4C81"
+    },
+    "text": {
+      "main": "#1F2937",
+      "muted": "#4B5563",
+      "inverse": "#FFFFFF",
+      "inverse_muted": "#D1D5DB"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "border_radius": {
+      "card": "rounded-2xl",
+      "button": "rounded-full"
+    },
+    "shadows": {
+      "card": "shadow-sm shadow-gray-200 border border-gray-100",
+      "card_hover": "hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1 transition-all duration-300"
+    }
+  },
+  "components": {
+    "navbar": {
+      "style": "fixed top-0 w-full z-50 transition-colors duration-300",
+      "state_top": "bg-transparent text-white",
+      "state_scrolled": "bg-[#0F4C81] text-white shadow-lg",
+      "logo_notes": "Dark navy logo needs to be placed directly on the deep blue background so it blends seamlessly. Use the provided logo URL."
+    },
+    "hero": {
+      "background": "bg-[#0F4C81] relative overflow-hidden",
+      "text_color": "text-white",
+      "overlay": "Use the abstract network image as an absolute background with opacity-20 and mix-blend-luminosity.",
+      "layout": "Centered text or asymmetrical text on left, abstract graphics on right."
+    },
+    "buttons": {
+      "primary": "bg-[#00A6A6] text-white hover:bg-[#008080] rounded-full px-8 py-3 font-semibold transition-colors",
+      "secondary": "bg-transparent border border-white text-white hover:bg-white/10 rounded-full px-8 py-3 font-semibold transition-colors",
+      "outline": "border border-[#0F4C81] text-[#0F4C81] hover:bg-[#0F4C81] hover:text-white rounded-full px-8 py-3 font-semibold transition-colors"
+    },
+    "cards": {
+      "base": "bg-white p-8 rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-1",
+      "icon_wrapper": "w-12 h-12 rounded-xl bg-[#0F4C81]/5 flex items-center justify-center text-[#0F4C81] mb-6"
+    }
+  },
+  "sections_instructions": {
+    "hero": {
+      "title": "Technology. Talent. Transformation.",
+      "subtitle": "Empowering your business with cutting-edge IT Services, Talent Acquisition, RaaS, and IaaS.",
+      "ctas": ["Explore Services", "Contact Us"]
+    },
+    "services": {
+      "layout": "Grid cols-1 md:cols-2 gap-8",
+      "items": [
+        "IT Services & Management",
+        "Talent Acquisition",
+        "Recruitment as a Service (RaaS)",
+        "Interview as a Service (IaaS)"
+      ]
+    },
+    "why_choose_us": {
+      "layout": "Split layout. Left: Grid of 4 feature blocks. Right: Large animated stat counters.",
+      "features": ["Industry Expertise", "Quality-Driven Delivery", "Flexible Engagement Models", "Faster Hiring & Tech Solutions"],
+      "stats": [
+        {"value": "100+", "label": "Clients"},
+        {"value": "5000+", "label": "Candidates Evaluated"},
+        {"value": "50+", "label": "Tech Domains"},
+        {"value": "95%", "label": "Client Satisfaction"}
+      ]
+    },
+    "industries": {
+      "layout": "Grid cols-2 md:cols-3 gap-6. Minimalist icon-based cards. Use Lucide icons.",
+      "items": ["IT & Software", "Banking & Finance", "Healthcare", "Manufacturing", "Retail", "Startups"]
+    },
+    "process": {
+      "layout": "Horizontal timeline. Use a flex-row setup with connector lines hidden on mobile.",
+      "steps": ["Understand", "Plan", "Execute", "Deliver", "Support"]
+    },
+    "testimonials": {
+      "layout": "Grid cols-1 md:cols-3 gap-8.",
+      "style": "Elegant cards with subtle border and avatar."
+    },
+    "cta_banner": {
+      "layout": "bg-[#0F4C81] py-20 text-center rounded-3xl mx-6 my-24 overflow-hidden relative",
+      "text": "Ready to Transform Your Business?"
+    },
+    "footer": {
+      "layout": "bg-gray-50 border-t border-gray-200 py-16",
+      "contact": "talent.experts@elephasolutions.com | +919486602103 | Srikaram Shelters, Plot No 62, Ramalingapuram, Kelambakkam, Tamil Nadu 603103"
+    }
+  },
+  "media": {
+    "logo": "https://customer-assets.emergentagent.com/job_31e3d407-02a6-4843-9506-c030c6639859/artifacts/56bncoqt_Elepha%20Logo.png",
+    "hero_background": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODE0NDI3ODN8MA&ixlib=rb-4.1.0&q=85",
+    "testimonial_avatars": [
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MTQ0Mjc2N3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MTQ0Mjc2N3ww&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODF8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MTQ0Mjc2N3ww&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Install Poppins and Open Sans via Google Fonts in index.html.",
+    "Install lucide-react and framer-motion.",
+    "Implement the sticky navbar: transparent at the top, becoming solid deep blue (#0F4C81) upon scroll. Place the dark navy logo inside it as the user specified it will blend.",
+    "For the hero section, layer the hero_background image with opacity-20 and mix-blend-luminosity over the solid deep blue background. Ensure text is highly readable.",
+    "For the Services, Industries, and Testimonials sections, strictly use the provided grid layouts with generous spacing (py-24 or py-32).",
+    "Use framer-motion for the statistical counters in the 'Why Choose Elepha' section so they animate on scroll.",
+    "Use Lucide icons for the Industries We Serve section (e.g., Monitor/Code for IT, Landmark/Dollar for Banking, HeartPulse for Healthcare, Factory for Manufacturing, ShoppingBag for Retail, Rocket for Startups).",
+    "Contact form must have a basic functional POST method. Add data-testid attributes to all interactive elements."
+  ]
+}
