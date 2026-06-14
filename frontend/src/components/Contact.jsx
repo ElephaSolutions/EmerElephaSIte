@@ -35,11 +35,20 @@ export default function Contact() {
       toast.success("Thanks! We'll get back to you within one business day.");
       setForm(initialState);
     } catch (err) {
-      const detail =
-        err?.response?.data?.detail ||
-        err?.response?.data?.[0]?.msg ||
-        "Something went wrong. Please try again.";
-      toast.error(typeof detail === "string" ? detail : "Submission failed.");
+      const data = err?.response?.data;
+      let msg = "Something went wrong. Please try again.";
+      if (typeof data?.detail === "string") {
+        msg = data.detail;
+      } else if (Array.isArray(data?.detail)) {
+        msg = data.detail
+          .map((d) => {
+            const field = Array.isArray(d?.loc) ? d.loc[d.loc.length - 1] : null;
+            return field ? `${field}: ${d.msg}` : d.msg;
+          })
+          .filter(Boolean)
+          .join(" • ");
+      }
+      toast.error(msg);
     } finally {
       setSubmitting(false);
     }
