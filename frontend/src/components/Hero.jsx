@@ -30,7 +30,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#a6f0f0] text-xs font-semibold uppercase tracking-[0.18em]"
             >
               <span className="h-1.5 w-1.5 rounded-full bg-[#00A6A6] animate-pulse" />
-              A chance to elevate — your tech and your team
+              Chance to elevate
             </span>
             <h1
               data-testid="hero-headline"
@@ -38,73 +38,54 @@ export default function Hero() {
             >
               Build the team.
               <span className="block text-[#7fe5e5]">Ship the platform.</span>
-              <span className="block">Skip the drag.</span>
             </h1>
             <p
               data-testid="hero-subheading"
-              className="mt-7 text-base md:text-lg text-white/80 max-w-xl leading-relaxed"
+              className="mt-6 text-base md:text-lg text-white/80 max-w-md leading-relaxed"
             >
-              Elepha Solutions is a senior-led practice that runs your IT stack,
-              recruits the engineers you need, and interviews the ones you
-              shortlist — without the bloat of a traditional vendor.
+              Senior-led IT services, recruitment and interview panels — under one roof.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
                 href="#services"
                 data-testid="hero-cta-explore"
-                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#00A6A6] hover:bg-[#008080] text-white font-semibold transition-colors shadow-lg shadow-[#00A6A6]/25"
+                className="group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#00A6A6] hover:bg-[#008080] text-white font-semibold transition-colors shadow-lg shadow-[#00A6A6]/25"
               >
-                Explore What We Do
+                What we do
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
               <a
                 href={`tel:${CONTACT.phoneRaw}`}
                 data-testid="hero-cta-call"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-transparent border border-white/30 hover:border-white text-white font-semibold transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-transparent border border-white/30 hover:border-white text-white font-semibold transition-colors"
               >
                 <PhoneCall className="h-4 w-4" />
-                Talk to a Partner
+                Call us
               </a>
-            </div>
-
-            <div className="mt-12 flex flex-wrap gap-x-10 gap-y-4 text-sm text-white/70">
-              <span>Senior-led squads</span>
-              <span className="hidden sm:inline text-white/30">·</span>
-              <span>Outcome-priced engagements</span>
-              <span className="hidden sm:inline text-white/30">·</span>
-              <span>Embedded in your tools</span>
             </div>
           </div>
 
-          {/* Side card */}
+          {/* Image mosaic */}
           <div className="lg:col-span-5 reveal">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#00A6A6]/30 to-[#1d619e]/20 rounded-[2rem] blur-2xl" aria-hidden />
-              <div className="relative rounded-[2rem] border border-white/15 bg-white/5 backdrop-blur-md p-6 md:p-8 shadow-2xl shadow-black/30">
-                <div className="aspect-[5/4] rounded-2xl overflow-hidden ring-1 ring-white/10 relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?crop=entropy&cs=srgb&fm=jpg&w=900&q=80"
-                    alt="A collaborative engineering team at work"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F4C81]/70 via-transparent to-transparent" />
-                </div>
-
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                    <div className="text-xs uppercase tracking-widest text-[#7fe5e5]">
-                      Avg. Time-to-Shortlist
-                    </div>
-                    <div className="font-poppins text-white text-xl mt-1">~ 7 days</div>
-                  </div>
-                  <div className="rounded-xl bg-white/5 border border-white/10 p-4">
-                    <div className="text-xs uppercase tracking-widest text-[#7fe5e5]">
-                      IaaS Debrief SLA
-                    </div>
-                    <div className="font-poppins text-white text-xl mt-1">&lt; 24 hrs</div>
-                  </div>
-                </div>
+              <div className="relative grid grid-cols-2 gap-3 p-3 rounded-[2rem] border border-white/15 bg-white/5 backdrop-blur-md">
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?crop=entropy&cs=srgb&fm=jpg&w=600&q=75"
+                  alt="Engineering team collaborating"
+                  className="aspect-[4/5] h-full w-full object-cover rounded-2xl row-span-2"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?crop=entropy&cs=srgb&fm=jpg&w=500&q=75"
+                  alt="Code on a screen"
+                  className="aspect-square h-full w-full object-cover rounded-2xl"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?crop=entropy&cs=srgb&fm=jpg&w=500&q=75"
+                  alt="Interview in progress"
+                  className="aspect-square h-full w-full object-cover rounded-2xl"
+                />
               </div>
             </div>
           </div>

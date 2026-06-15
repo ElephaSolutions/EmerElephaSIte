@@ -22,140 +22,75 @@ export const NAV_LINKS = [
 export const SERVICES = [
   {
     id: "it-services",
-    title: "IT Services & Management",
-    short: "Engineering and operating the systems your business runs on.",
-    long:
-      "Architecture reviews, cloud build-outs, application modernisation and 24×7 managed operations — delivered by senior squads that own outcomes, not just tickets.",
+    title: "IT Services",
+    short: "Cloud, DevOps and 24×7 managed operations.",
+    bullets: ["Cloud & DevOps", "App Modernisation", "Managed Ops"],
     iconKey: "monitor",
-    bullets: ["Cloud & DevOps", "Application Modernisation", "Managed Services"],
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=srgb&fm=jpg&w=900&q=75",
   },
   {
     id: "talent-acquisition",
     title: "Talent Acquisition",
-    short: "A senior search practice for roles that can't be left to chance.",
-    long:
-      "Niche, leadership and high-volume mandates handled with the rigour of an in-house TA team and the reach of a specialist firm. Calibrated submissions, transparent pipelines, zero noise.",
+    short: "Senior search for roles that matter.",
+    bullets: ["Leadership Search", "Niche Tech", "High-Volume"],
     iconKey: "users",
-    bullets: ["Leadership Search", "Niche Tech Hiring", "Volume Pipelines"],
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=srgb&fm=jpg&w=900&q=75",
   },
   {
     id: "raas",
     title: "Recruitment as a Service",
-    short: "An embedded hiring engine that flexes with your roadmap.",
-    long:
-      "Plug-in pods of sourcers, recruiters and coordinators that operate inside your tools, your brand and your bar — from kickoff to offer rollouts. Pay per outcome, scale up or down per quarter.",
+    short: "Embedded hiring pods. Pay per outcome.",
+    bullets: ["Embedded Pods", "Outcome Pricing", "ATS-Native"],
     iconKey: "rocket",
-    bullets: ["Embedded Pods", "Outcome Pricing", "ATS-native Workflows"],
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=srgb&fm=jpg&w=900&q=75",
   },
   {
     id: "iaas",
     title: "Interview as a Service",
-    short: "Senior interview panels, on demand, without the hiring drag.",
-    long:
-      "Calibrated interviewers across 40+ tech and functional tracks conduct your loops, score with structured rubrics, and hand you decision-ready debriefs in under 24 hours.",
+    short: "Calibrated panels. Debriefs in 24 hours.",
+    bullets: ["Senior Panels", "Structured Rubrics", "24-hr SLA"],
     iconKey: "messageSquare",
-    bullets: ["Calibrated Panels", "Structured Rubrics", "24-hr Debriefs"],
+    image:
+      "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?crop=entropy&cs=srgb&fm=jpg&w=900&q=75",
   },
 ];
 
 export const WHY_FEATURES = [
-  {
-    title: "Senior-Led Delivery",
-    desc: "Every engagement is anchored by practitioners with 10+ years in their craft — never juniors with senior labels.",
-    iconKey: "award",
-  },
-  {
-    title: "Outcome Accountability",
-    desc: "We commit to time-to-shortlist, time-to-deploy and quality metrics in writing. If we miss them, you don't pay for them.",
-    iconKey: "shieldCheck",
-  },
-  {
-    title: "Engagement on Your Terms",
-    desc: "Project, retainer, T&M, RaaS pods or IaaS slots — we shape the commercial model around your operating reality.",
-    iconKey: "layers",
-  },
-  {
-    title: "Speed Without Shortcuts",
-    desc: "Tight feedback loops, weekly leadership reviews and a flat escalation path keep momentum without breaking quality.",
-    iconKey: "zap",
-  },
+  { title: "Senior-Led", desc: "10+ year practitioners on every account.", iconKey: "award" },
+  { title: "Outcome-Priced", desc: "Metrics in writing. Miss them, you don't pay.", iconKey: "shieldCheck" },
+  { title: "Flexible Models", desc: "Project, retainer, RaaS or IaaS — your call.", iconKey: "layers" },
+  { title: "Quick to Move", desc: "Shortlists in days. Deploys in weeks.", iconKey: "zap" },
 ];
 
 export const STATS = [
-  { value: 12, suffix: "+", label: "Years of Combined Practice" },
-  { value: 40, suffix: "+", label: "Specialist Tracks Covered" },
-  { value: 7, suffix: "", label: "Day Avg. Time-to-Shortlist" },
-  { value: 96, suffix: "%", label: "Repeat Engagement Rate" },
+  { value: 12, suffix: "+", label: "Years of Practice" },
+  { value: 40, suffix: "+", label: "Tracks Covered" },
+  { value: 7, suffix: "", label: "Day Shortlist" },
+  { value: 96, suffix: "%", label: "Repeat Rate" },
 ];
 
 export const INDUSTRIES = [
-  {
-    name: "IT & Software",
-    iconKey: "code",
-    blurb: "Product, platform and SaaS teams scaling engineering bandwidth.",
-  },
-  {
-    name: "Banking & Finance",
-    iconKey: "landmark",
-    blurb: "Modernisation, compliance-ready hires, and risk-aware delivery.",
-  },
-  {
-    name: "Healthcare & Life Sciences",
-    iconKey: "heartPulse",
-    blurb: "Regulated environments, clinical-aware tech and specialist talent.",
-  },
-  {
-    name: "Manufacturing",
-    iconKey: "factory",
-    blurb: "Industry 4.0, IoT enablement and shop-floor digitisation talent.",
-  },
-  {
-    name: "Retail & Consumer",
-    iconKey: "shoppingBag",
-    blurb: "Omnichannel platforms, data teams and demand-led hiring sprints.",
-  },
-  {
-    name: "Startups & Scale-ups",
-    iconKey: "rocket",
-    blurb: "Founding teams, fractional leadership and ramp-up RaaS pods.",
-  },
+  { name: "IT & Software", iconKey: "code", blurb: "Product & platform teams." },
+  { name: "Banking & Finance", iconKey: "landmark", blurb: "Compliance-aware delivery." },
+  { name: "Healthcare", iconKey: "heartPulse", blurb: "Regulated environments." },
+  { name: "Manufacturing", iconKey: "factory", blurb: "Industry 4.0 & IoT." },
+  { name: "Retail", iconKey: "shoppingBag", blurb: "Omnichannel & data." },
+  { name: "Startups", iconKey: "rocket", blurb: "Founding teams & scale-ups." },
 ];
 
 export const PROCESS_STEPS = [
-  {
-    title: "Discover",
-    desc: "A working session where we map your business, your stack and the role or problem in unambiguous terms.",
-  },
-  {
-    title: "Design",
-    desc: "We translate context into a written engagement: scope, milestones, success metrics and commercial model.",
-  },
-  {
-    title: "Deploy",
-    desc: "A senior squad goes live in days — recruiters, engineers or interviewers, embedded in your tools and rituals.",
-  },
-  {
-    title: "Measure",
-    desc: "Weekly outcome reviews against the metrics we signed up for — no glossy decks, just movement.",
-  },
-  {
-    title: "Evolve",
-    desc: "Engagements flex as your roadmap shifts. Scale up, pause, or pivot to a different model without friction.",
-  },
+  { title: "Discover", desc: "Map the problem in plain words." },
+  { title: "Design", desc: "Scope, milestones, metrics — in writing." },
+  { title: "Deploy", desc: "Senior squad goes live in days." },
+  { title: "Measure", desc: "Weekly reviews against the metrics." },
+  { title: "Evolve", desc: "Scale up, pause or pivot — no friction." },
 ];
 
-// Differentiator pillars used in the new "Operating Principles" section
 export const PRINCIPLES = [
-  {
-    title: "Calibrated, not commoditised",
-    desc: "Every shortlist, panel and sprint is calibrated to your bar — we'd rather send three signal-rich candidates than thirty templated ones.",
-  },
-  {
-    title: "Transparent by default",
-    desc: "Live dashboards, shared trackers and weekly written updates. You always know exactly where things stand.",
-  },
-  {
-    title: "Senior on the line",
-    desc: "A partner-level lead is accountable for every account — escalations reach a decision-maker in under 24 hours.",
-  },
+  { title: "Calibrated, not commoditised", desc: "Signal-rich shortlists. Always." },
+  { title: "Transparent by default", desc: "Live trackers. Weekly written updates." },
+  { title: "Senior on the line", desc: "A partner answers within 24 hours." },
 ];
