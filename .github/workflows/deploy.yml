@@ -1,4 +1,4 @@
-name: Deploy Frontend to GitHub Pages
+name: Deploy Frontend to GitHub Pages (no JS actions)
 
 on:
   push:
@@ -9,18 +9,15 @@ permissions:
   contents: read
   pages: write
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'false'
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Clone repository using git
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          git clone --depth=1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${REPO}.git .
 
       - name: Determine project directory
         id: set-dir
@@ -29,10 +26,12 @@ jobs:
           elif [ -f frontend/package.json ]; then echo "dir=frontend" >> $GITHUB_OUTPUT
           else echo "No package.json found in repo root or frontend/"; exit 1; fi
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+      - name: Install Node.js 24 (NodeSource)
+        run: |
+          curl -fsSL https://deb.nodesource.com/setup_24.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          node -v
+          npm -v
 
       - name: Install dependencies
         run: npm ci
@@ -42,9 +41,19 @@ jobs:
         run: npm run build --if-present
         working-directory: ${{ steps.set-dir.outputs.dir }}
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ steps.set-dir.outputs.dir }}/build
-          publish_branch: gh-pages
+      - name: Deploy to gh-pages (plain git)
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          set -e
+          build_dir="${{ steps.set-dir.outputs.dir }}/build"
+          if [ ! -d "$build_dir" ]; then echo "Build directory not found: $build_dir"; exit 1; fi
+          tmpdir=$(mktemp -d)
+          cp -r "$build_dir"/. "$tmpdir"/
+          cd "$tmpdir"
+          git init
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${REPO}.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "Deploy to gh-pages: ${GITHUB_SHA}"
+          git push -f origin gh-pages
