@@ -38,11 +38,11 @@ jobs:
           set -e
           cd "${{ steps.set-dir.outputs.dir }}"
           if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then
-            echo "Found lockfile — using npm ci"
-            npm ci
+            echo "Found lockfile — using npm ci (legacy-peer-deps)"
+            npm ci --legacy-peer-deps
           else
-            echo "No lockfile found — using npm install"
-            npm install
+            echo "No lockfile found — using npm install (legacy-peer-deps)"
+            npm install --legacy-peer-deps
           fi
 
       - name: Build
